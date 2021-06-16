@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "317172492125",
+    "project_id": "adgitm-d9527",
+    "storage_bucket": "adgitm-d9527.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317172492125:android:4a3d6911fa0b2e08fd2ab4",
+        "android_client_info": {
+          "package_name": "com.example.adgitm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317172492125-n7h7n5jqnppnjdmltg2cml5gr4prp67n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adgitm",
+            "certificate_hash": "c53d19cfe3a14ee0ad9f92c8c85bc0e8eebbbf6c"
+          }
+        },
+        {
+          "client_id": "317172492125-gu29cuj9fvv9chlp87o619qcop5okdoo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATtE6l27fa6mMKYdlXugDE0a3zTuimCYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317172492125-gu29cuj9fvv9chlp87o619qcop5okdoo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
