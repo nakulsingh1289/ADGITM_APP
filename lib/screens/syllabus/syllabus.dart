@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:adgitm/common/loading.dart';
@@ -5,7 +6,6 @@ import 'package:adgitm/services/pdfAPI.dart';
 import 'package:adgitm/tools/pdfViewer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 class Syllabus extends StatefulWidget {
   const Syllabus({Key key}) : super(key: key);
 
@@ -18,6 +18,11 @@ class _SyllabusState extends State<Syllabus> {
   String _branch = 'CSE';
   bool loading = false;
   String _mba = 'MBA';
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +72,7 @@ class _SyllabusState extends State<Syllabus> {
                               value: value,
                               child: Text(
                                 value,
-                                style:  Theme.of(context).textTheme.headline6,
+                                style: Theme.of(context).textTheme.headline6,
                               ),
                             );
                           }).toList(),
@@ -110,7 +115,6 @@ class _SyllabusState extends State<Syllabus> {
                               ),
                             );
                           }).toList(),
-
                           onChanged: (String value) {
                             setState(() {
                               _semester = value;
@@ -144,10 +148,9 @@ class _SyllabusState extends State<Syllabus> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 10),
                             alignment: Alignment.center,
-                            width: 80,
+                            width: 100,
                             height: 30,
                             decoration: BoxDecoration(
-                              // color: Colors.blue[900],
                               border: Border.all(
                                 color: Theme.of(context).buttonColor,
                               ),
@@ -155,44 +158,51 @@ class _SyllabusState extends State<Syllabus> {
                             ),
                             child: Text(
                               "View ",
-                              style: GoogleFonts.mulish(fontSize: 16, color: Theme.of(context).buttonColor,),
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            setState(() {
-                              loading = true;
-                            });
-                            final url = 'syllabus/$_branch/sem$_semester.pdf';
-                            final file = await PDFApi.loadFirebase(url);
-                            print(file.toString());
-                            if (file == null) return;
-
-                            openPDF(context, file);
-                            setState(() {
-                              loading = false;
-                            });
-                          },
-                          child: Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 10),
-                            alignment: Alignment.center,
-                            width: 100,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              // color: Colors.blue[900],
-                              border: Border.all(
+                              style: GoogleFonts.mulish(
+                                fontSize: 16,
                                 color: Theme.of(context).buttonColor,
                               ),
-                              borderRadius: BorderRadius.circular(25.0),
-                            ),
-                            child: Text(
-                              "Download ",
-                              style: GoogleFonts.mulish(fontSize: 16, color: Theme.of(context).buttonColor,),
                             ),
                           ),
                         ),
+                        // GestureDetector(
+                        //   onTap: () async {
+                        //     final url = 'syllabus/$_branch/sem$_semester.pdf';
+                        //     setState(() {
+                        //       loading = true;
+                        //     });
+                        //
+                        //     final file = await PDFApi.loadFirebase(url);
+                        //     print(file.toString());
+                        //     if (file == null) return;
+                        //
+                        //     openPDF(context, file);
+                        //     setState(() {
+                        //       loading = false;
+                        //     });
+                        //   },
+                        //   child: Container(
+                        //     padding: EdgeInsets.symmetric(
+                        //         vertical: 5, horizontal: 10),
+                        //     alignment: Alignment.center,
+                        //     width: 100,
+                        //     height: 30,
+                        //     decoration: BoxDecoration(
+                        //       // color: Colors.blue[900],
+                        //       border: Border.all(
+                        //         color: Theme.of(context).buttonColor,
+                        //       ),
+                        //       borderRadius: BorderRadius.circular(25.0),
+                        //     ),
+                        //     child: Text(
+                        //       "Download ",
+                        //       style: GoogleFonts.mulish(
+                        //         fontSize: 16,
+                        //         color: Theme.of(context).buttonColor,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                     SizedBox(
@@ -225,7 +235,6 @@ class _SyllabusState extends State<Syllabus> {
                               ),
                             );
                           }).toList(),
-
                           onChanged: (String value) {
                             setState(() {
                               _mba = value;
@@ -261,41 +270,6 @@ class _SyllabusState extends State<Syllabus> {
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 10),
                             alignment: Alignment.center,
-                            width: 80,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              // color: Colors.blue[900],
-                              border: Border.all(
-                                color: Theme.of(context).buttonColor,
-                              ),
-                              borderRadius: BorderRadius.circular(25.0),
-                            ),
-                            child: Text(
-                              "View ",
-                              style: GoogleFonts.mulish(fontSize: 16, color: Theme.of(context).buttonColor,),
-                            ),
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () async {
-                            setState(() {
-                              loading = true;
-                            });
-
-                            final url = 'syllabus/$_mba.pdf';
-                            final file = await PDFApi.loadFirebase(url);
-                            print(file.toString());
-                            if (file == null) return;
-
-                            openPDF(context, file);
-                            setState(() {
-                              loading = false;
-                            });
-                          },
-                          child: Container(
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 10),
-                            alignment: Alignment.center,
                             width: 100,
                             height: 30,
                             decoration: BoxDecoration(
@@ -306,11 +280,52 @@ class _SyllabusState extends State<Syllabus> {
                               borderRadius: BorderRadius.circular(25.0),
                             ),
                             child: Text(
-                              "Download ",
-                              style: GoogleFonts.mulish(fontSize: 16,color: Theme.of(context).buttonColor,),
+                              "View ",
+                              style: GoogleFonts.mulish(
+                                fontSize: 16,
+                                color: Theme.of(context).buttonColor,
+                              ),
                             ),
                           ),
                         ),
+                        // GestureDetector(
+                        //   onTap: () async {
+                        //     setState(() {
+                        //       loading = true;
+                        //     });
+                        //
+                        //     final url = 'syllabus/$_mba.pdf';
+                        //     final file = await PDFApi.loadFirebase(url);
+                        //     print(file.toString());
+                        //     if (file == null) return;
+                        //
+                        //     openPDF(context, file);
+                        //     setState(() {
+                        //       loading = false;
+                        //     });
+                        //   },
+                        //   child: Container(
+                        //     padding: EdgeInsets.symmetric(
+                        //         vertical: 5, horizontal: 10),
+                        //     alignment: Alignment.center,
+                        //     width: 100,
+                        //     height: 30,
+                        //     decoration: BoxDecoration(
+                        //       // color: Colors.blue[900],
+                        //       border: Border.all(
+                        //         color: Theme.of(context).buttonColor,
+                        //       ),
+                        //       borderRadius: BorderRadius.circular(25.0),
+                        //     ),
+                        //     child: Text(
+                        //       "Download ",
+                        //       style: GoogleFonts.mulish(
+                        //         fontSize: 16,
+                        //         color: Theme.of(context).buttonColor,
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
                   ],

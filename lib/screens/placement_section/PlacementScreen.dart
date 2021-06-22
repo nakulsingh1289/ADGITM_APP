@@ -49,32 +49,32 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                 ),
                               ),
                               ButtonBar(
-                                alignment: MainAxisAlignment.end,
+                                alignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 5, horizontal: 10),
-                                      alignment: Alignment.center,
-                                      width: 80,
-                                      height: 25,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Theme.of(context).buttonColor,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Text(
-                                        "Download",
-                                        style: GoogleFonts.mulish(
-                                            color:
-                                                Theme.of(context).buttonColor,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  ),
+                                  // GestureDetector(
+                                  //   onTap: () {},
+                                  //   child: Container(
+                                  //     padding: EdgeInsets.symmetric(
+                                  //         vertical: 5, horizontal: 10),
+                                  //     alignment: Alignment.center,
+                                  //     width: 80,
+                                  //     height: 25,
+                                  //     decoration: BoxDecoration(
+                                  //       border: Border.all(
+                                  //         color: Theme.of(context).buttonColor,
+                                  //       ),
+                                  //       borderRadius:
+                                  //           BorderRadius.circular(20.0),
+                                  //     ),
+                                  //     child: Text(
+                                  //       "Download",
+                                  //       style: GoogleFonts.mulish(
+                                  //           color:
+                                  //               Theme.of(context).buttonColor,
+                                  //           fontSize: 12),
+                                  //     ),
+                                  //   ),
+                                  // ),
                                   GestureDetector(
                                     onTap: () async {
                                       setState(() {
@@ -116,11 +116,14 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 10,
-                                  )
+                                  // SizedBox(
+                                  //   width: 10,
+                                  // )
                                 ],
                               ),
+                              SizedBox(
+                                height: 10,
+                              )
                             ],
                           ),
                         ),
@@ -137,32 +140,32 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                 ),
                               ),
                               ButtonBar(
-                                alignment: MainAxisAlignment.end,
+                                alignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 5, horizontal: 10),
-                                      alignment: Alignment.center,
-                                      width: 80,
-                                      height: 25,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Theme.of(context).buttonColor,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Text(
-                                        "Download",
-                                        style: GoogleFonts.mulish(
-                                            color:
-                                                Theme.of(context).buttonColor,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  ),
+                                  // GestureDetector(
+                                  //   onTap: () {},
+                                  //   child: Container(
+                                  //     padding: EdgeInsets.symmetric(
+                                  //         vertical: 5, horizontal: 10),
+                                  //     alignment: Alignment.center,
+                                  //     width: 80,
+                                  //     height: 25,
+                                  //     decoration: BoxDecoration(
+                                  //       border: Border.all(
+                                  //         color: Theme.of(context).buttonColor,
+                                  //       ),
+                                  //       borderRadius:
+                                  //           BorderRadius.circular(20.0),
+                                  //     ),
+                                  //     child: Text(
+                                  //       "Download",
+                                  //       style: GoogleFonts.mulish(
+                                  //           color:
+                                  //               Theme.of(context).buttonColor,
+                                  //           fontSize: 12),
+                                  //     ),
+                                  //   ),
+                                  // ),
                                   GestureDetector(
                                     onTap: () async {
                                       setState(() {
@@ -202,11 +205,11 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 10,
-                                  )
                                 ],
                               ),
+                              SizedBox(
+                                height: 10,
+                              )
                             ],
                           ),
                         ),
@@ -223,32 +226,32 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                 ),
                               ),
                               ButtonBar(
-                                alignment: MainAxisAlignment.end,
+                                alignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 5, horizontal: 10),
-                                      alignment: Alignment.center,
-                                      width: 80,
-                                      height: 25,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Theme.of(context).buttonColor,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Text(
-                                        "Download",
-                                        style: GoogleFonts.mulish(
-                                            color:
-                                                Theme.of(context).buttonColor,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  ),
+                                  // GestureDetector(
+                                  //   onTap: () {},
+                                  //   child: Container(
+                                  //     padding: EdgeInsets.symmetric(
+                                  //         vertical: 5, horizontal: 10),
+                                  //     alignment: Alignment.center,
+                                  //     width: 80,
+                                  //     height: 25,
+                                  //     decoration: BoxDecoration(
+                                  //       border: Border.all(
+                                  //         color: Theme.of(context).buttonColor,
+                                  //       ),
+                                  //       borderRadius:
+                                  //           BorderRadius.circular(20.0),
+                                  //     ),
+                                  //     child: Text(
+                                  //       "Download",
+                                  //       style: GoogleFonts.mulish(
+                                  //           color:
+                                  //               Theme.of(context).buttonColor,
+                                  //           fontSize: 12),
+                                  //     ),
+                                  //   ),
+                                  // ),
                                   GestureDetector(
                                     onTap: () async {
                                       setState(() {
@@ -288,11 +291,11 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 10,
-                                  )
                                 ],
                               ),
+                              SizedBox(
+                                height: 10,
+                              )
                             ],
                           ),
                         ),
@@ -309,32 +312,32 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                 ),
                               ),
                               ButtonBar(
-                                alignment: MainAxisAlignment.end,
+                                alignment: MainAxisAlignment.center,
                                 children: [
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: Container(
-                                      padding: EdgeInsets.symmetric(
-                                          vertical: 5, horizontal: 10),
-                                      alignment: Alignment.center,
-                                      width: 80,
-                                      height: 25,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Theme.of(context).buttonColor,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(20.0),
-                                      ),
-                                      child: Text(
-                                        "Download",
-                                        style: GoogleFonts.mulish(
-                                            color:
-                                                Theme.of(context).buttonColor,
-                                            fontSize: 12),
-                                      ),
-                                    ),
-                                  ),
+                                  // GestureDetector(
+                                  //   onTap: () {},
+                                  //   child: Container(
+                                  //     padding: EdgeInsets.symmetric(
+                                  //         vertical: 5, horizontal: 10),
+                                  //     alignment: Alignment.center,
+                                  //     width: 80,
+                                  //     height: 25,
+                                  //     decoration: BoxDecoration(
+                                  //       border: Border.all(
+                                  //         color: Theme.of(context).buttonColor,
+                                  //       ),
+                                  //       borderRadius:
+                                  //           BorderRadius.circular(20.0),
+                                  //     ),
+                                  //     child: Text(
+                                  //       "Download",
+                                  //       style: GoogleFonts.mulish(
+                                  //           color:
+                                  //               Theme.of(context).buttonColor,
+                                  //           fontSize: 12),
+                                  //     ),
+                                  //   ),
+                                  // ),
                                   GestureDetector(
                                     onTap: () async {
                                       setState(() {
@@ -374,11 +377,11 @@ class _PlacementScreenState extends State<PlacementScreen> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    width: 10,
-                                  )
                                 ],
                               ),
+                              SizedBox(
+                                height: 10,
+                              )
                             ],
                           ),
                         ),

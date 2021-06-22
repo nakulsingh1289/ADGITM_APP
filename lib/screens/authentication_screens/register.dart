@@ -30,6 +30,7 @@ class _RegisterState extends State<Register> {
         : Scaffold(
             body: SafeArea(
               child: Container(
+                color: Colors.white,
                 padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
                 child: Form(
                   key: _formKey,
@@ -63,14 +64,14 @@ class _RegisterState extends State<Register> {
                             Text("Email", style: GoogleFonts.mulish()),
                             Row(
                               children: [
-                                FaIcon(FontAwesomeIcons.envelope),
+                                FaIcon(FontAwesomeIcons.envelope, color: Colors.black,),
                                 SizedBox(width: 10),
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width * 0.6,
                                   child: TextFormField(
                                     decoration: InputDecoration(
-                                        hintText: "enter email",
+                                        // hintText: "enter email",
                                         contentPadding: EdgeInsets.all(8.0),
                                         enabledBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(
@@ -108,14 +109,14 @@ class _RegisterState extends State<Register> {
                             Text("Password", style: GoogleFonts.mulish()),
                             Row(
                               children: [
-                                FaIcon(FontAwesomeIcons.key),
+                                FaIcon(FontAwesomeIcons.key, color: Colors.black,),
                                 SizedBox(width: 10),
                                 Container(
                                   width:
                                       MediaQuery.of(context).size.width * 0.6,
                                   child: TextFormField(
                                     decoration: InputDecoration(
-                                        hintText: "enter password ",
+                                        // hintText: "enter password ",
                                         contentPadding: EdgeInsets.all(8.0),
                                         enabledBorder: UnderlineInputBorder(
                                           borderSide: BorderSide(

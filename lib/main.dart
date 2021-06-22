@@ -4,7 +4,6 @@ import 'package:adgitm/services/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -19,8 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamProvider<User>.value(
       initialData: null,
-      value : AuthService().user,
-
+      value: AuthService().user,
       child: MaterialApp(
         // theme: themeData,
         darkTheme: themeDataDark,

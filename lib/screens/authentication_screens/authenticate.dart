@@ -2,8 +2,8 @@ import 'package:adgitm/common/loading.dart';
 import 'package:adgitm/screens/authentication_screens/register.dart';
 import 'package:adgitm/screens/authentication_screens/signIn.dart';
 import 'package:adgitm/services/auth.dart';
-import 'package:adgitm/temp.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,6 +15,26 @@ class Authenticate extends StatefulWidget {
 class _AuthenticateState extends State<Authenticate> {
   bool loading = false;
   AuthService _auth = AuthService();
+
+  @override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+
+  @override
+  dispose(){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return loading
@@ -22,12 +42,11 @@ class _AuthenticateState extends State<Authenticate> {
         : Scaffold(
             body: SafeArea(
                 child: Container(
+              color: Colors.white,
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    // color: Colors.red,
                     width: MediaQuery.of(context).size.width,
                     child: Column(
                       children: [
@@ -42,22 +61,12 @@ class _AuthenticateState extends State<Authenticate> {
                         SizedBox(
                           height: 30,
                         ),
-                        // Text("Welcome to ADGITM",
-                        //     style: GoogleFonts.mulish(
-                        //       fontWeight: FontWeight.bold,
-                        //       fontSize: 30,
-                        //       color: Colors.blue[900],
-                        //     )),
-                        // SizedBox(
-                        //   height:  MediaQuery.of(context).size.height * 0.05,
-                        // ),
                       ],
                     ),
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: Column(
-                      // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           "Login with",

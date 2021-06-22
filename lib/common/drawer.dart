@@ -3,10 +3,8 @@ import 'package:adgitm/screens/feedback/feedback.dart';
 import 'package:adgitm/screens/notices/NoticeScreen.dart';
 import 'package:adgitm/screens/placement_section/PlacementScreen.dart';
 import 'package:adgitm/screens/syllabus/syllabus.dart';
-import 'package:adgitm/temp.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CustomDrawer extends StatelessWidget {
