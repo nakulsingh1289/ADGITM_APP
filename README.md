@@ -7,11 +7,25 @@ and syllabus.
 
 # Demo
 
-<img src="demo/about.gif" width="215" height="460" /> <img src="demo/notices.gif" width="215" height="460" />
-<img src="demo/userinfo.gif" width="215" height="460" />
-<img src="demo/syllabus.gif" width="215" height="460" />
-<img src="demo/placement.gif" width="215" height="460" />
+### About Screen
+<img src="demo/about.gif" width="215" height="460" /> 
+
+### Notices Screen
 <img src="demo/notices.gif" width="215" height="460" />
+
+### User Information Screen
+<img src="demo/userinfo.gif" width="215" height="460" />
+
+### Syllabus Screen
+<img src="demo/syllabus.gif" width="215" height="460" />
+
+### Placement Screen
+<img src="demo/placement.gif" width="215" height="460" />
+
+### Notices Screen
+<img src="demo/notices.gif" width="215" height="460" />
+
+### Feedback Screen
 <img src="demo/feedback.gif" width="215" height="460" />
 
 ## Tech Stack
